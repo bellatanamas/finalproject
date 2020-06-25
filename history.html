@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> final project </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style type="text/css">
+
+		h1{
+			background-color: #D2691E;
+			font-size: 50px;
+			font-family: Courier;
+		}
+
+		#mySidenav a {
+ 		position: absolute;
+ 		left: -80px;
+  		transition: 0.3s;
+  		padding: 15px;
+  		width: 125px;
+  		text-decoration: none;
+  		font-size: 20px;
+ 		color: white;
+  		border-radius: 0 5px 5px 0;
+		}
+
+		#mySidenav a:hover {
+  		left: 0;
+		}
+
+		#home {
+  		top: 140px;
+  		background-color: #8B4513;
+  		font-family: monospace;
+		}
+
+		#history {
+ 		top: 200px;
+  		background-color: #D2691E;
+  		font-family: monospace;
+		}
+
+		#culture {
+ 		top: 260px;
+  		background-color: #CD853F;
+  		font-family: monospace;
+		}
+
+		* {
+  		box-sizing: border-box;
+		}
+
+		body {
+  		background-image: url(pics/history.jpg);
+  		background-size: 70%;
+ 	 	font-family: Helvetica, sans-serif;
+		}
+
+		/* The actual timeline (the vertical ruler) */
+		.timeline {
+ 	 	position: relative;
+  		max-width: 1200px;
+  		margin: 0 auto;
+		}
+
+		/* The actual timeline (the vertical ruler) */
+		.timeline::after {
+ 	 	content: '';
+  		position: absolute;
+  		width: 6px;
+  		background-color: white;
+  		top: 0;
+  		bottom: 0;
+  		left: 50%;
+ 		margin-left: -3px;
+		}
+
+		/* Container around content */
+		.container {
+	  	padding: 10px 40px;
+  		position: relative;
+  		background-color: inherit;
+  		width: 50%;
+		}
+
+		/* The circles on the timeline */
+		.container::after {
+  		content: '';
+  		position: absolute;
+  		width: 25px;
+  		height: 25px;
+  		right: -17px;
+ 		background-color: white;
+  		border: 4px solid #FF9F55;
+  		top: 15px;
+  		border-radius: 50%;
+  		z-index: 1;
+		}
+
+		/* Place the container to the left */
+		.left {
+  		left: 0;
+		}
+
+		/* Place the container to the right */
+		.right {
+ 	 	left: 50%;
+		}
+
+		/* Add arrows to the left container (pointing right) */
+		.left::before {
+  		content: " ";
+ 	 	height: 0;
+  		position: absolute;
+  		top: 22px;
+  		width: 0;
+  		z-index: 1;
+  		right: 30px;
+  		border: medium solid white;
+  		border-width: 10px 0 10px 10px;
+  		border-color: transparent transparent transparent white;
+		}
+
+		/* Add arrows to the right container (pointing left) */
+		.right::before {
+  		content: " ";
+  		height: 0;
+  		position: absolute;
+  		top: 22px;
+  		width: 0;
+  		z-index: 1;
+  		left: 30px;
+  		border: medium solid white;
+  		border-width: 10px 10px 10px 0;
+  		border-color: transparent white transparent transparent;
+		}
+
+		/* Fix the circle for containers on the right side */
+		.right::after {
+  		left: -16px;
+		}
+	
+		/* The actual content */
+		.content {
+  		padding: 20px 30px;
+  		background-color: white;
+ 		position: relative;
+  		border-radius: 6px;
+		}
+
+		/* Media queries - Responsive timeline on screens less than 600px wide */
+		@media screen and (max-width: 600px) {
+  		/* Place the timelime to the left */
+  		.timeline::after {
+  		left: 31px;
+  		}
+  
+  		/* Full-width containers */
+  		.container {
+  		width: 100%;
+  		padding-left: 70px;
+  		padding-right: 25px;
+  		}
+  
+  		/* Make sure that all arrows are pointing leftwards */
+  		.container::before {
+  		left: 60px;
+  		border: medium solid white;
+  		border-width: 10px 10px 10px 0;
+  		border-color: transparent white transparent transparent;
+  		}
+
+  		/* Make sure all circles are at the same spot */
+  		.left::after, .right::after {
+  		left: 15px;
+  		}
+  
+  		/* Make all right containers behave like the left ones */
+  		.right {
+  		left: 0%;
+  		}
+	}
+
+	</style>
+
+</head>
+
+<body>
+
+	<h1> <i> History </i> </h1>
+
+	<div id="mySidenav" class="sidenav">
+  		<a href="index.html" id="home">home</a>
+  		<a href="history.html" id="history">history</a>
+  		<a href="culture.html" id="culture">culture</a>
+	</div>
+
+	<div style="margin-left:80px;">
+	</div> 
+
+	<div class="timeline">
+ 	<div class="container right">
+    <div class="content">
+      <h2> Pre-historic Era : </h2>
+      <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java has been inhabited by their ancestors (hominina) since prehistoric times. Around 40,000 years ago, Aboriginals and Melanesians colonised Central Java. They were assimilated or replaced by Mongoloid Austronesians by about 3,000 BC, who brought with them technologies of pottery, the bow and arrow, and introduced domesticated pigs, fowls, and dogs.</p>
+     </div>
+  	</div>
+
+
+  	<div class="container left">
+    <div class="content">
+      <h2> Hindu-Buddhist and Islamic Era : </h2>
+      <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hinduism and Buddhism, were brought by the Indians from South Asia, at the time of Central Java was a centre of power in Java back then.The first dated inscription in Central Java was the Canggal from 732 AD (or 654 Saka). In the late 16th century, the development of Islam had surpassed Hinduism and Buddhism as the dominant religion in Java. The emergence of the Islamic kingdoms in Java is also inseparable from the role of Walisongo. </p>
+    </div>
+  	</div>
+
+  	<div class="container right">
+    <div class="content">
+      <h2> Dutch Colonial Rule : </h2>
+      <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; By the late 16th century, European traders began to frequent central Javanese ports. The Dutch established a presence in the region through their East India Company. During the Napoleonic Wars in Europe, Central Java as a Dutch colony was handed over to the British. However, the Dutch also brought modernisation to Central Java. In the 1900s, the predecessor of the modern Central Java was created, named Gouvernement of Midden-Java. </p>
+    </div>
+  	</div>
+
+  	<div class="container left">
+  	<div class="content">
+      <h2> Independence and Contemporary Era :</h2>
+      <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; On 1 March 1942, the Imperial Japanese Army landed on Java, and the following week, the Dutch colonial government surrendered unconditionally to Japan. Following the surrender of Japan, Indonesia proclaimed its independence on 17 August 1945. </p>
+    </div>
+  	</div>
+  
+  </div> 
+
+
+</body>
+</html>
